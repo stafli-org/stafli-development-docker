@@ -45,8 +45,6 @@ services:
     build:
       context: "./dockerfiles"
       dockerfile: "devel.dockerfile"
-    depends_on:
-      - standard
     logging:
       driver: "json-file"
     ports:
