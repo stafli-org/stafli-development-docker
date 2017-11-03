@@ -1,8 +1,8 @@
 
 #
-#    CentOS 6 (centos6) devel service (dockerfile)
-#    Copyright (C) 2016 SOL-ICT
-#    This file is part of the Docker General Purpose System Distro.
+#    CentOS 6 (centos6) Devel System (dockerfile)
+#    Copyright (C) 2016-2017 Stafli
+#    This file is part of the Stafli Application Stack.
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -18,7 +18,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-FROM solict/general-purpose-system-distro:centos6_standard
+FROM stafli/stafli.base.system:centos6_base
 MAINTAINER Luís Pedro Algarvio <lp.algarvio@gmail.com>
 
 #

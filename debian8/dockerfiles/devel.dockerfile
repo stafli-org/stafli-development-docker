@@ -1,8 +1,8 @@
 
 #
-#    Debian 8 (jessie) devel service (dockerfile)
-#    Copyright (C) 2016 SOL-ICT
-#    This file is part of the Docker General Purpose System Distro.
+#    Debian 8 (jessie) Devel System (dockerfile)
+#    Copyright (C) 2016-2017 Stafli
+#    This file is part of the Stafli Application Stack.
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -18,7 +18,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-FROM solict/general-purpose-system-distro:debian8_standard
+FROM stafli/stafli.base.system:debian8_base
 MAINTAINER Luís Pedro Algarvio <lp.algarvio@gmail.com>
 
 #

@@ -1,7 +1,7 @@
 #
-#    Makefile
-#    Copyright (C) 2016 SOL-ICT
-#    This file is part of the Docker General Purpose System Distro.
+#    Stafli Devel System (Makefile)
+#    Copyright (C) 2016-2017 Stafli
+#    This file is part of the Stafli Application Stack.
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -26,7 +26,7 @@ all: help
 
 help:
 	@echo "\
-Docker General Purpose System Distro\n\
+Stafli Devel System\n\
 \n\
 Syntax:\n\
 make <command> DISTRO=<distribution>\n\
@@ -148,26 +148,27 @@ purge:
 		@echo Purging containers, networks, volumes and images for debian8...
 		bash -c "(cd debian8; set -o allexport; source .env; set +o allexport; docker-compose down)";
 		docker volume rm debian8_devel_data;
-		docker rmi solict/general-purpose-system-distro:debian8_devel;
+		docker rmi stafli/stafli.devel.system:debian8_devel;
 		@echo
 		@echo Purging containers, networks, volumes and images for debian7...
 		bash -c "(cd debian7; set -o allexport; source .env; set +o allexport; docker-compose down)";
 		docker volume rm debian7_devel_data;
-		docker rmi solict/general-purpose-system-distro:debian7_devel;
+		docker rmi stafli/stafli.devel.system:debian7_devel;
 		@echo
 		@echo Purging containers, networks, volumes and images for centos7...
 		bash -c "(cd centos7; set -o allexport; source .env; set +o allexport; docker-compose down)";
 		docker volume rm centos7_devel_data;
-		docker rmi solict/general-purpose-system-distro:centos7_devel;
+		docker rmi stafli/stafli.devel.system:centos7_devel;
 		@echo
 		@echo Purging containers, networks, volumes and images for centos6...
+		bash -c "(cd centos6; set -o allexport; source .env; set +o allexport; docker-compose down)";
 		docker volume rm centos6_devel_data;
-		docker rmi solict/general-purpose-system-distro:centos6_devel;
+		docker rmi stafli/stafli.devel.system:centos6_devel;
         else
 		@echo Purging containers, networks, volumes and images for $(DISTRO)...
 		bash -c "(cd $(DISTRO); set -o allexport; source .env; set +o allexport; docker-compose down)";
 		docker volume rm $(DISTRO)_devel_data;
-		docker rmi solict/general-purpose-system-distro:$(DISTRO)_devel;
+		docker rmi stafli/stafli.devel.system:$(DISTRO)_devel;
         endif
 
 
@@ -177,19 +178,19 @@ img-ls:
 	@echo
         ifeq ($(DISTRO), all)
 		@echo Listing images for debian8...
-		docker images | grep -E "solict/general-purpose-system-distro.*debian8" | sort -n;
+		docker images | grep -E "stafli/stafli.devel.system.*debian8" | sort -n;
 		@echo
 		@echo Listing images for debian7...
-		docker images | grep -E "solict/general-purpose-system-distro.*debian7" | sort -n;
+		docker images | grep -E "stafli/stafli.devel.system.*debian7" | sort -n;
 		@echo
 		@echo Listing images for centos7...
-		docker images | grep -E "solict/general-purpose-system-distro.*centos7" | sort -n;
+		docker images | grep -E "stafli/stafli.devel.system.*centos7" | sort -n;
 		@echo
 		@echo Listing images for centos6...
-		docker images | grep -E "solict/general-purpose-system-distro.*centos6" | sort -n;
+		docker images | grep -E "stafli/stafli.devel.system.*centos6" | sort -n;
         else
 		@echo Listing images for $(DISTRO)...
-		docker images | grep -E "solict/general-purpose-system-distro.*$(DISTRO)" | sort -n;
+		docker images | grep -E "stafli/stafli.devel.system.*$(DISTRO)" | sort -n;
         endif
 
 
@@ -243,19 +244,19 @@ img-rm:
 	@echo
         ifeq ($(DISTRO), all)
 		@echo Removing images for debian8...
-		docker rmi solict/general-purpose-system-distro:debian8_devel;
+		docker rmi stafli/stafli.devel.system:debian8_devel;
 		@echo
 		@echo Removing images for debian7...
-		docker rmi solict/general-purpose-system-distro:debian7_devel;
+		docker rmi stafli/stafli.devel.system:debian7_devel;
 		@echo
 		@echo Removing images for centos7...
-		docker rmi solict/general-purpose-system-distro:centos7_devel;
+		docker rmi stafli/stafli.devel.system:centos7_devel;
 		@echo
 		@echo Removing images for centos6...
-		docker rmi solict/general-purpose-system-distro:centos6_devel;
+		docker rmi stafli/stafli.devel.system:centos6_devel;
         else
 		@echo Removing images for $(DISTRO)...
-		docker rmi solict/general-purpose-system-distro:$(DISTRO)_devel;
+		docker rmi stafli/stafli.devel.system:$(DISTRO)_devel;
         endif
 
 
