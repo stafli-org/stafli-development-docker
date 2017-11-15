@@ -2,6 +2,7 @@
 #
 #    Debian 8 (jessie) Devel System (dockerfile)
 #    Copyright (C) 2016-2017 Stafli
+#    Luís Pedro Algarvio
 #    This file is part of the Stafli Application Stack.
 #
 # This program is free software: you can redistribute it and/or modify
@@ -19,7 +20,6 @@
 #
 
 FROM stafli/stafli.base.system:debian8_base
-MAINTAINER Luís Pedro Algarvio <lp.algarvio@gmail.com>
 
 #
 # Packages

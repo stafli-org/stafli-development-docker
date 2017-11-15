@@ -26,7 +26,7 @@ These are the services described by the dockerfile and docker-compose files:
 
 ## Images
 These are the [resulting images](https://hub.docker.com/r/stafli/stafli.devel.system/tags/) upon building:
-- Devel service:
+- Devel:
   - stafli/stafli.devel.system:debian8_devel
   - stafli/stafli.devel.system:debian7_devel
   - stafli/stafli.devel.system:centos7_devel
@@ -34,7 +34,7 @@ These are the [resulting images](https://hub.docker.com/r/stafli/stafli.devel.sy
 
 ## Containers
 These containers can be created from the images:
-- Devel service:
+- Devel:
   - debian8_devel_xxx
   - debian7_devel_xxx
   - centos7_devel_xxx
