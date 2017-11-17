@@ -23,7 +23,7 @@
 version: '2'
 
 #
-# Main services
+# Services
 #
 services:
 
@@ -64,18 +64,4 @@ services:
       - "22"
     working_dir: "/tmp"
     command: "/usr/bin/supervisord -c /etc/supervisord.conf --nodaemon"
-
-#
-# Networks
-#
-networks:
-  default:
-    driver: "bridge"
-
-#
-# Volumes
-#
-volumes:
-  devel_data:
-    driver: "local"
 
