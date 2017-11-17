@@ -28,6 +28,6 @@ version: '2'
 services:
 
   devel:
-    ports:
-      - "10022"
+    build:
+      args:
 
