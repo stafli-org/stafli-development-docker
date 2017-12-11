@@ -1,6 +1,6 @@
 # Stafli Devel System
 Stafli Devel System builds are based on [Debian](https://www.debian.org) and [CentOS](https://www.centos.org), and developed as scripts for [Docker](https://www.docker.com).  
-Continues on [Stafli Base System](https://github.com/stafli-org/stafli.base.system) builds.  
+Continues on [Stafli Base System](https://github.com/stafli-org/stafli.system.base) builds.  
 This project is part of the [Stafli Application Stack](https://github.com/stafli-org).
 
 Requires [Docker Compose](https://docs.docker.com/compose) 1.6.x or higher due to the [version 2](https://docs.docker.com/compose/compose-file/#versioning) format of the docker-compose.yml files.
@@ -10,7 +10,7 @@ An optional [Makefile](../../tree/master/Makefile) is provided to help with load
 
 Scripts are also provided for each distribution to help test and deploy the installation procedures in non-Docker environments.
 
-The images are automatically built at a [repository](https://hub.docker.com/r/stafli/stafli.devel.system) in the Docker Hub registry.
+The images are automatically built at a [repository](https://hub.docker.com/r/stafli/stafli.system.devel) in the Docker Hub registry.
 
 ## Distributions
 The services use custom images as a starting point for the following distributions:
@@ -23,23 +23,23 @@ The services use custom images as a starting point for the following distributio
 
 ## Services
 These are the services described by the dockerfile and docker-compose files:
-- Devel, built on [Stafli Base System](https://github.com/stafli-org/stafli.base.system) and additional development packages
+- Devel 1.0.x, built on [Stafli Base System](https://github.com/stafli-org/stafli.system.base) and additional development packages
 
 ## Images
-These are the [resulting images](https://hub.docker.com/r/stafli/stafli.devel.system/tags) upon building:
-- Devel:
-  - stafli/stafli.devel.system:debian8_devel
-  - stafli/stafli.devel.system:debian7_devel
-  - stafli/stafli.devel.system:centos7_devel
-  - stafli/stafli.devel.system:centos6_devel
+These are the [resulting images](https://hub.docker.com/r/stafli/stafli.system.devel/tags) upon building:
+- Devel 1.0.x:
+  - stafli/stafli.system.devel:devel10_debian8
+  - stafli/stafli.system.devel:devel10_debian7
+  - stafli/stafli.system.devel:devel10_centos7
+  - stafli/stafli.system.devel:devel10_centos6
 
 ## Containers
 These containers can be created from the images:
-- Devel:
-  - debian8_devel_xxx
-  - debian7_devel_xxx
-  - centos7_devel_xxx
-  - centos6_devel_xxx
+- Devel 1.0.x:
+  - stafli_system_devel10_debian8_xxx
+  - stafli_system_devel10_debian7_xxx
+  - stafli_system_devel10_centos7_xxx
+  - stafli_system_devel10_centos6_xxx
 
 ## Usage
 
@@ -56,19 +56,19 @@ Where <image_url> is the full image url (lookup the image list above).
 
 Example:
 ```
-docker pull stafli/stafli.devel.system:debian8_devel
+docker pull stafli/stafli.system.devel:devel10_debian8
 
-docker run -ti stafli/stafli.devel.system:debian8_devel /bin/bash
+docker run -ti stafli/stafli.system.devel:devel10_debian8 /bin/bash
 ```
 
 ### From GitHub repository (automated)
 
 Note: this method allows using docker-compose and the Makefile.
 
-1. Download the repository [zip file](https://github.com/stafli-org/stafli.devel.system/archive/master.zip) and unpack it or clone the repository using:  
-`git clone https://github.com/stafli-org/stafli.devel.system.git`
+1. Download the repository [zip file](https://github.com/stafli-org/stafli.system.devel/archive/master.zip) and unpack it or clone the repository using:  
+`git clone https://github.com/stafli-org/stafli.system.devel.git`
 2. Navigate to the project directory through the terminal:  
-`cd stafli.devel.system`
+`cd stafli.system.devel`
 3. Type in the desired operation through the terminal:  
 `make <operation> DISTRO=<distro>`
 
@@ -76,8 +76,8 @@ Where <distro> is the distribution/directory and <operation> is the desired dock
 
 Example:
 ```
-git clone https://github.com/stafli-org/stafli.devel.system.git;
-cd stafli.devel.system;
+git clone https://github.com/stafli-org/stafli.system.devel.git;
+cd stafli.system.devel;
 
 # Example #1: quick start, with build
 make up DISTRO=debian8;

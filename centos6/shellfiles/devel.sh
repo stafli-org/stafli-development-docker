@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-#    CentOS 6 (centos6) Devel System (shellscript)
+#    CentOS 6 (centos6) Devel10 System (shellscript)
 #    Copyright (C) 2016-2017 Stafli
 #    Luís Pedro Algarvio
 #    This file is part of the Stafli Application Stack.

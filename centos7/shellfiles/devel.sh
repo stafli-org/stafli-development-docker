@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-#    CentOS 7 (centos7) Devel System (shellscript)
+#    CentOS 7 (centos7) Devel10 System (shellscript)
 #    Copyright (C) 2016-2017 Stafli
 #    Luís Pedro Algarvio
 #    This file is part of the Stafli Application Stack.

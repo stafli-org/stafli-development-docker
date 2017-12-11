@@ -1,6 +1,6 @@
 ---
 #
-#    Debian 8 (jessie) Devel System (docker-compose.override.sample.yml)
+#    Debian 8 (jessie) Devel10 System (docker-compose.override.sample.yml)
 #    Copyright (C) 2016-2017 Stafli
 #    Luís Pedro Algarvio
 #    This file is part of the Stafli Application Stack.
@@ -27,7 +27,7 @@ version: '2'
 #
 services:
 
-  debian8_devel_system:
+  system_devel10_debian8:
     build:
       args:
 

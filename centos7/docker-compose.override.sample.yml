@@ -1,6 +1,6 @@
 ---
 #
-#    CentOS 7 (centos7) Devel System (docker-compose.override.sample.yml)
+#    CentOS 7 (centos7) Devel10 System (docker-compose.override.sample.yml)
 #    Copyright (C) 2016-2017 Stafli
 #    Luís Pedro Algarvio
 #    This file is part of the Stafli Application Stack.
@@ -27,7 +27,7 @@ version: '2'
 #
 services:
 
-  centos7_devel_system:
+  system_devel10_centos7:
     build:
       args:
 
