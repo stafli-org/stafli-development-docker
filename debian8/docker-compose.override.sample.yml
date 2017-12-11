@@ -27,7 +27,7 @@ version: '2'
 #
 services:
 
-  devel:
+  debian8_devel_system:
     build:
       args:
 

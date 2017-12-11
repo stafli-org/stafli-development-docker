@@ -27,7 +27,7 @@ version: '2'
 #
 services:
 
-  devel:
+  centos6_devel_system:
     build:
       args:
 

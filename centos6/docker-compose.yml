@@ -27,7 +27,7 @@ version: '2'
 #
 services:
 
-  devel:
+  centos6_devel_system:
     labels:
       - "org.label-schema.schema-version=1.0"
       - "org.label-schema.name=$PROJECT_NAME"
@@ -54,7 +54,7 @@ services:
       - "org.label-schema.os-architecture=$BUILD_ARCH"
       - "org.label-schema.version=$BUILD_VERSION"
       - "org.label-schema.build-date=$BUILD_DATE"
-    image: "stafli/stafli.devel.system:centos6_devel"
+    image: "${IMAGE_URL_PREFIX}:centos6_devel"
     build:
       context: "./dockerfiles"
       dockerfile: "devel.dockerfile"
