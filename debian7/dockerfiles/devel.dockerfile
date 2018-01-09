@@ -22,6 +22,32 @@
 FROM stafli/stafli.system.base:base10_debian7
 
 #
+# Labels
+#
+LABEL description="Stafli Devel System (stafli/stafli.system.devel), Based on Stafli Base System (stafli/stafli.system.base" \
+      maintainer="lp@algarvio.org" \
+      org.label-schema.schema-version="1.0.0-rc.1" \
+      org.label-schema.name="Stafli Devel System (stafli/stafli.system.devel)" \
+      org.label-schema.description="Based on Stafli Base System (stafli/stafli.system.base" \
+      org.label-schema.keywords="stafli, devel, system, debian, centos" \
+      org.label-schema.url="https://stafli.org/" \
+      org.label-schema.license="GPLv3" \
+      org.label-schema.vendor-name="Stafli" \
+      org.label-schema.vendor-email="info@stafli.org" \
+      org.label-schema.vendor-website="https://www.stafli.org" \
+      org.label-schema.authors.lpalgarvio.name="Luis Pedro Algarvio" \
+      org.label-schema.authors.lpalgarvio.email="lp@algarvio.org" \
+      org.label-schema.authors.lpalgarvio.homepage="https://lp.algarvio.org" \
+      org.label-schema.authors.lpalgarvio.role="Maintainer" \
+      org.label-schema.registry-url="https://hub.docker.com/r/stafli/stafli.system.devel" \
+      org.label-schema.vcs-url="https://github.com/stafli-org/stafli.system.devel" \
+      org.label-schema.vcs-branch="master" \
+      org.label-schema.os-id="debian" \
+      org.label-schema.os-version-id="wheezy" \
+      org.label-schema.os-architecture="amd64" \
+      org.label-schema.version="1.0"
+
+#
 # Packages
 #
 
