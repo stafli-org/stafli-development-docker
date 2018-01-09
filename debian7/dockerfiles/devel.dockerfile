@@ -19,11 +19,14 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
+#
+# Build
+#
+
+# Base image to use
 FROM stafli/stafli.system.base:base10_debian7
 
-#
-# Labels
-#
+# Labels to apply
 LABEL description="Stafli Devel System (stafli/stafli.system.devel), Based on Stafli Base System (stafli/stafli.system.base" \
       maintainer="lp@algarvio.org" \
       org.label-schema.schema-version="1.0.0-rc.1" \
@@ -46,6 +49,22 @@ LABEL description="Stafli Devel System (stafli/stafli.system.devel), Based on St
       org.label-schema.os-version-id="wheezy" \
       org.label-schema.os-architecture="amd64" \
       org.label-schema.version="1.0"
+
+#
+# Arguments
+#
+
+#
+# Environment
+#
+
+# Working directory to use when executing build and run instructions
+# Defaults to /.
+#WORKDIR /
+
+# User and group to use when executing build and run instructions
+# Defaults to root.
+#USER root:root
 
 #
 # Packages
@@ -95,4 +114,12 @@ RUN printf "Installing repositories and packages...\n" && \
     apt-get clean && rm -rf /var/lib/apt/lists/*; \
     \
     printf "Finished installing repositories and packages...\n";
+
+#
+# Run
+#
+
+# Command to execute
+# Defaults to /bin/bash.
+#CMD ["/bin/bash"]
 
