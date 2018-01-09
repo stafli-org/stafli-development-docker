@@ -71,7 +71,7 @@ LABEL description="Stafli Devel System (stafli/stafli.system.devel), Based on St
 #
 
 # Install revision control packages
-#  - patch: for patch, the pach creator and applier tool
+#  - patch: for patch, the patch creator and applier tool
 #  - git: for git, the Git distributed revision control system client
 # Install parser packages
 #  - bison: for bison, a YACC-compatible parser generator
@@ -111,7 +111,7 @@ RUN printf "Installing repositories and packages...\n" && \
       libsasl2-dev libldap2-dev libkrb5-dev \
       libxml2-dev zlib1g-dev && \
     printf "Cleanup the Package Manager...\n" && \
-    apt-get clean && rm -rf /var/lib/apt/lists/*; \
+    apt-get clean && rm -rf /var/lib/apt/lists/* && \
     \
     printf "Finished installing repositories and packages...\n";
 
