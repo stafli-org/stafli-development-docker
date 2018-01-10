@@ -111,10 +111,15 @@ RUN printf "Installing repositories and packages...\n" && \
       openssl-devel gnutls-devel libcurl-devel \
       cyrus-sasl-devel openldap-devel krb5-devel \
       libxml2-devel zlib-devel && \
+    \
     printf "Cleanup the Package Manager...\n" && \
     yum clean all && rm -Rf /var/lib/yum/* && \
     \
     printf "Finished installing repositories and packages...\n";
+
+#
+# Configuration
+#
 
 #
 # Run
@@ -123,4 +128,8 @@ RUN printf "Installing repositories and packages...\n" && \
 # Command to execute
 # Defaults to /bin/bash.
 #CMD ["/bin/bash"]
+
+# Ports to expose
+# Defaults to none.
+#EXPOSE ...
 

@@ -110,10 +110,15 @@ RUN printf "Installing repositories and packages...\n" && \
       libssl-dev libgnutls-dev libcurl4-openssl-dev \
       libsasl2-dev libldap2-dev libkrb5-dev \
       libxml2-dev zlib1g-dev && \
+    \
     printf "Cleanup the Package Manager...\n" && \
     apt-get clean && rm -rf /var/lib/apt/lists/* && \
     \
     printf "Finished installing repositories and packages...\n";
+
+#
+# Configuration
+#
 
 #
 # Run
@@ -122,4 +127,8 @@ RUN printf "Installing repositories and packages...\n" && \
 # Command to execute
 # Defaults to /bin/bash.
 #CMD ["/bin/bash"]
+
+# Ports to expose
+# Defaults to none.
+#EXPOSE ...
 
