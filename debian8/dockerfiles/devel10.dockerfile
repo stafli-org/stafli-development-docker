@@ -100,7 +100,7 @@ LABEL description="Stafli Devel System (stafli/stafli.system.devel), Based on St
 #  - zlib1g-dev:  the ZLib library - development files
 RUN printf "Installing repositories and packages...\n" && \
     \
-    printf "Install the required packages...\n" && \
+    printf "Install the selected packages...\n" && \
     apt-get update && apt-get install -qy \
       patch git \
       bison m4 re2c \
@@ -111,7 +111,7 @@ RUN printf "Installing repositories and packages...\n" && \
       libsasl2-dev libldap2-dev libkrb5-dev \
       libxml2-dev zlib1g-dev && \
     \
-    printf "Cleanup the Package Manager...\n" && \
+    printf "Cleanup the package manager...\n" && \
     apt-get clean && rm -rf /var/lib/apt/lists/* && \
     \
     printf "Finished installing repositories and packages...\n";
