@@ -28,10 +28,10 @@ These are the services described by the dockerfile and docker-compose files:
 ## Images
 These are the [resulting images](https://hub.docker.com/r/stafli/stafli.system.devel/tags) upon building:
 - Devel 1.0.x:
-  - stafli/stafli.system.devel:devel10_debian8
-  - stafli/stafli.system.devel:devel10_debian7
-  - stafli/stafli.system.devel:devel10_centos7
-  - stafli/stafli.system.devel:devel10_centos6
+  - stafli/stafli.system.devel:devel10_debian8   [![](https://images.microbadger.com/badges/image/stafli/stafli.system.devel:devel10_debian8.svg)](https://microbadger.com/images/stafli/stafli.system.devel:devel10_debian8 "Get your own image badge on microbadger.com")
+  - stafli/stafli.system.devel:devel10_debian7   [![](https://images.microbadger.com/badges/image/stafli/stafli.system.devel:devel10_debian7.svg)](https://microbadger.com/images/stafli/stafli.system.devel:devel10_debian7 "Get your own image badge on microbadger.com")
+  - stafli/stafli.system.devel:devel10_centos7   [![](https://images.microbadger.com/badges/image/stafli/stafli.system.devel:devel10_centos7.svg)](https://microbadger.com/images/stafli/stafli.system.devel:devel10_centos7 "Get your own image badge on microbadger.com")
+  - stafli/stafli.system.devel:devel10_centos6   [![](https://images.microbadger.com/badges/image/stafli/stafli.system.devel:devel10_centos6.svg)](https://microbadger.com/images/stafli/stafli.system.devel:devel10_centos6 "Get your own image badge on microbadger.com")
 
 ## Containers
 These containers can be created from the images:
