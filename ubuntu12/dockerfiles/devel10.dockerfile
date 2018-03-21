@@ -1,6 +1,6 @@
 
 #
-#    Debian 7 (wheezy) Devel10 System (dockerfile)
+#    Ubuntu 12.04 (precise) Devel10 System (dockerfile)
 #    Copyright (C) 2016-2017 Stafli
 #    Luís Pedro Algarvio
 #    This file is part of the Stafli Application Stack.
@@ -24,7 +24,7 @@
 #
 
 # Base image to use
-FROM stafli/stafli.system.base:base10_debian7
+FROM stafli/stafli.system.base:base10_ubuntu12
 
 # Labels to apply
 LABEL description="Stafli Devel System (stafli/stafli.system.devel), Based on Stafli Base System (stafli/stafli.system.base" \
@@ -45,8 +45,8 @@ LABEL description="Stafli Devel System (stafli/stafli.system.devel), Based on St
       org.label-schema.registry-url="https://hub.docker.com/r/stafli/stafli.system.devel" \
       org.label-schema.vcs-url="https://github.com/stafli-org/stafli.system.devel" \
       org.label-schema.vcs-branch="master" \
-      org.label-schema.os-id="debian" \
-      org.label-schema.os-version-id="wheezy" \
+      org.label-schema.os-id="ubuntu" \
+      org.label-schema.os-version-id="precise" \
       org.label-schema.os-architecture="amd64" \
       org.label-schema.version="1.0"
 
@@ -94,8 +94,7 @@ LABEL description="Stafli Devel System (stafli/stafli.system.devel), Based on St
 #    - libc6-dev: the Embedded GNU C Library - Development Libraries and Header Files
 #    - libpcre3-dev: the Perl 5 Compatible Regular Expression Library - development files
 #    - libssl-dev: the OpenSSL toolkit - development files
-#    - libgnutls-dev: GNU TLS library - development files
-#    - libcurl4-openssl-dev: the CURL library - development files (OpenSSL version)
+#    - libgnutls28-dev: GNU TLS library - development files
 #    - libsasl2-dev: the Cyrus SASL library - development files
 #    - libldap2-dev: the OpenLDAP library - development files
 #    - libkrb5-dev: the MIT Kerberos library - development files
@@ -114,7 +113,7 @@ RUN printf "Installing repositories and packages...\n" && \
       autoconf automake make pkg-config libtool \
       cpp gcc g++ \
       linux-libc-dev libc6-dev libpcre3-dev \
-      libssl-dev libgnutls-dev libcurl4-openssl-dev \
+      libssl-dev libgnutls28-dev \
       libsasl2-dev libldap2-dev libkrb5-dev \
       libxml2-dev zlib1g-dev && \
     \
